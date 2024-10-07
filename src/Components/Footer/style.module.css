@@ -1,0 +1,25 @@
+.icon{
+    width: 35px;
+    height: 35px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.paymenting{
+    width: 50px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .paymentcompany{
+        flex-direction: column;
+    }
+    .paymenting{
+        width: 100px;
+    }
+}

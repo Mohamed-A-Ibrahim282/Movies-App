@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+
+:root {
+    --main-color: #032541;
+    --btn-bg: #008c87;
+    --text-color: #0dbab4;
+    --light-color: #f0f3f2;
+    --shadow: rgba(145, 158, 171, .2) 0px 2px 4px -1px, rgba(145, 158, 171, .14) 0px 4px 5px 0px, rgba(145, 158, 171, .12) 0px 1px 10px 0px;
+    --font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+body {
+    font-family: var(--font-family) !important;
+}
+
+.movie {
+    box-shadow: var(--shadow);
+    transition: all 0.5s;
+}
+
+.movie:hover {
+    box-shadow: 5px 5px var(--text-color), -5px -5px var(--text-color);
+    cursor: pointer;
+}
+
+.review {
+    box-shadow: var(--shadow);
+    border: 1px solid #DDD;
+}
+
+.Link{
+    color: black;
+    transition: all 0.5s;
+}
+
+.Link:hover{
+    color: blue;
+}
+
+.text-main {
+    color: var(--main-color);
+}
+
+.bg-main {
+    background-color: var(--main-color) !important;
+}
+
+.bg-main-light {
+    background-color: var(--light-color) !important;
+}
+
+.btnBg {
+    background-color: var(--btn-bg) !important;
+}
+
+.iconColor {
+    color: var(--text-color) !important;
+}
+
+.dropdown-item:hover {
+    color: #032541 !important;
+    font-weight: bold !important;
+}
+
+.layer {
+    background-color: hsla(207, 91%, 13%, 0.6);
+}
+
+.borderStyle {
+    border: 1px solid #032541;
+}
+
+.colorfulText {
+    background: linear-gradient(to right, #c0fecf 0, #1ed5a9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.waves{
+    transform: translateY(20%);
+}
+
+.detailsLayer{
+    background-color: #212529db;
+}
