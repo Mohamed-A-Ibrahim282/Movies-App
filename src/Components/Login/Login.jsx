@@ -64,78 +64,80 @@ const Login = () => {
 
   return (
     <>
-      <div className="w-75 m-auto p-5">
-        <h2>Login now:</h2>
+      <div className="vh-100">
+        <div className="w-75 m-auto p-5">
+          <h2>Login now:</h2>
 
-        {successMsg ? (
-          <div className="alert alert-success">{successMsg}</div>
-        ) : errorMsg ? (
-          <div className="alert alert-danger">{errorMsg}</div>
-        ) : (
-          ""
-        )}
-
-        <form onSubmit={formikData.handleSubmit}>
-          <label className="mt-3" htmlFor="email">
-            Email
-          </label>
-          <input
-            value={formikData.values.email}
-            onChange={formikData.handleChange}
-            onBlur={formikData.handleBlur}
-            id="email"
-            type="email"
-            className="form-control"
-          />
-          {formikData.errors.email && formikData.touched.email ? (
-            <p className="text-danger mb-0 fw-semibold">
-              {formikData.errors.email}
-            </p>
+          {successMsg ? (
+            <div className="alert alert-success">{successMsg}</div>
+          ) : errorMsg ? (
+            <div className="alert alert-danger">{errorMsg}</div>
           ) : (
             ""
           )}
 
-          <label className="mt-3" htmlFor="password">
-            Password
-          </label>
-          <input
-            value={formikData.values.password}
-            onChange={formikData.handleChange}
-            onBlur={formikData.handleBlur}
-            id="password"
-            type="password"
-            className="form-control"
-          />
-          {formikData.errors.password && formikData.touched.password ? (
-            <p className="text-danger mb-0 fw-semibold">
-              {formikData.errors.password}
-            </p>
-          ) : (
-            ""
-          )}
+          <form onSubmit={formikData.handleSubmit}>
+            <label className="mt-3" htmlFor="email">
+              Email
+            </label>
+            <input
+              value={formikData.values.email}
+              onChange={formikData.handleChange}
+              onBlur={formikData.handleBlur}
+              id="email"
+              type="email"
+              className="form-control"
+            />
+            {formikData.errors.email && formikData.touched.email ? (
+              <p className="text-danger mb-0 fw-semibold">
+                {formikData.errors.email}
+              </p>
+            ) : (
+              ""
+            )}
 
-          <div className="d-flex justify-content-end">
-            <button
-              style={{ width: "100px", height: "40px" }}
-              type="submit"
-              className="btn btnBg text-white fw-semibold mt-3 d-flex align-items-center justify-content-center"
-            >
-              {loading ? (
-                <ColorRing
-                  visible={true}
-                  height="30"
-                  width="30"
-                  ariaLabel="color-ring-loading"
-                  wrapperStyle={{}}
-                  wrapperClass="color-ring-wrapper"
-                  colors={["#fff", "#fff", "#fff", "#fff", "#fff"]}
-                />
-              ) : (
-                "Login"
-              )}
-            </button>
-          </div>
-        </form>
+            <label className="mt-3" htmlFor="password">
+              Password
+            </label>
+            <input
+              value={formikData.values.password}
+              onChange={formikData.handleChange}
+              onBlur={formikData.handleBlur}
+              id="password"
+              type="password"
+              className="form-control"
+            />
+            {formikData.errors.password && formikData.touched.password ? (
+              <p className="text-danger mb-0 fw-semibold">
+                {formikData.errors.password}
+              </p>
+            ) : (
+              ""
+            )}
+
+            <div className="d-flex justify-content-end">
+              <button
+                style={{ width: "100px", height: "40px" }}
+                type="submit"
+                className="btn btnBg text-white fw-semibold mt-3 d-flex align-items-center justify-content-center"
+              >
+                {loading ? (
+                  <ColorRing
+                    visible={true}
+                    height="30"
+                    width="30"
+                    ariaLabel="color-ring-loading"
+                    wrapperStyle={{}}
+                    wrapperClass="color-ring-wrapper"
+                    colors={["#fff", "#fff", "#fff", "#fff", "#fff"]}
+                  />
+                ) : (
+                  "Login"
+                )}
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </>
   );
