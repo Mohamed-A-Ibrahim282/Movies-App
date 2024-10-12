@@ -31,4 +31,4 @@ Technologies used:
 -react-toast
 -react-bootstrap
 
-Live: https://lnkd.in/dihAMi46
+Live: https://mohamed-a-ibrahim282.github.io/Movies-app/
